@@ -88,12 +88,13 @@ class A_user extends CI_Controller
         if ($this->form_validation->run() == FALSE) {
             $this->create();
         } else {
+            $img = upload_gambar_biasa('user_', 'image/user/', 'jpg|png|jpeg', 10000, 'foto');
             $data = array(
 		'nama_lengkap' => $this->input->post('nama_lengkap',TRUE),
 		'username' => $this->input->post('username',TRUE),
 		'password' => md5($this->input->post('password',TRUE)),
 		'level' => $this->input->post('level',TRUE),
-		'foto' => $this->input->post('foto',TRUE),
+		'foto' => $img,
 	    );
 
             $this->A_user_model->insert($data);
@@ -138,7 +139,7 @@ class A_user extends CI_Controller
 		'username' => $this->input->post('username',TRUE),
 		'password' => md5($this->input->post('password',TRUE)),
 		'level' => $this->input->post('level',TRUE),
-		'foto' => $this->input->post('foto',TRUE),
+		// 'foto' => $this->input->post('foto',TRUE),
 	    );
 
             $this->A_user_model->update($this->input->post('id_user', TRUE), $data);
@@ -167,7 +168,7 @@ class A_user extends CI_Controller
 	$this->form_validation->set_rules('username', 'username', 'trim|required');
 	$this->form_validation->set_rules('password', 'password', 'trim|required');
 	$this->form_validation->set_rules('level', 'level', 'trim|required');
-	$this->form_validation->set_rules('foto', 'foto', 'trim|required');
+	// $this->form_validation->set_rules('foto', 'foto', 'trim|required');
 
 	$this->form_validation->set_rules('id_user', 'id_user', 'trim');
 	$this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
