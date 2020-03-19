@@ -29,7 +29,7 @@
         
         <li><a href="app"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
         
-        <li><a href="devisi"><i class="fa fa-keyboard-o"></i> <span>Master Devisi</span></a></li>
+        <li><a href="devisi"><i class="fa fa-keyboard-o"></i> <span>Master Upload Informasi</span></a></li>
         <li class="treeview">
           <a href="#">
               <i class="fa fa-list"></i>
@@ -37,9 +37,9 @@
               <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-              <li><a href="#"><i class="fa fa-angle-double-right"></i> Permohonan Informasi</a></li>
-              <li><a href="#"><i class="fa fa-angle-double-right"></i> Pengajuan Keberatan Informasi</a></li>
-              <li><a href="#"><i class="fa fa-angle-double-right"></i> Aduan Pelanggaran</a></li>
+              <li><a href="permohonan_informasi"><i class="fa fa-angle-double-right"></i> Permohonan Informasi</a></li>
+              <li><a href="keberatan_informasi"><i class="fa fa-angle-double-right"></i> Pengajuan Keberatan Informasi</a></li>
+              <li><a href="aduan_pelanggaran"><i class="fa fa-angle-double-right"></i> Aduan Pelanggaran</a></li>
               <!-- <li><a href="stok"><i class="fa fa-angle-double-right"></i> Stok</a></li> -->
           </ul>
         </li>

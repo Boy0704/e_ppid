@@ -80,7 +80,8 @@ class Devisi extends CI_Controller
 	    'waktu_pembuatan' => set_value('waktu_pembuatan'),
 	    'bentuk_informasi' => set_value('bentuk_informasi'),
 	    'jangka_waktu' => set_value('jangka_waktu'),
-	    'kategori_informasi' => set_value('kategori_informasi'),
+        'kategori_informasi' => set_value('kategori_informasi'),
+	    'file' => set_value('file'),
 	);
         $this->load->view('v_index', $data);
     }
@@ -92,6 +93,9 @@ class Devisi extends CI_Controller
         if ($this->form_validation->run() == FALSE) {
             $this->create();
         } else {
+
+            $file = upload_gambar_biasa('file_', 'image/file/', 'docx|xls|xlsx', 10000, 'userfile');
+
             $data = array(
 		'ringkasan_informasi' => $this->input->post('ringkasan_informasi',TRUE),
 		'penjabat_yang_menguasai_informasi' => $this->input->post('penjabat_yang_menguasai_informasi',TRUE),
@@ -99,7 +103,8 @@ class Devisi extends CI_Controller
 		'waktu_pembuatan' => $this->input->post('waktu_pembuatan',TRUE),
 		'bentuk_informasi' => $this->input->post('bentuk_informasi',TRUE),
 		'jangka_waktu' => $this->input->post('jangka_waktu',TRUE),
-		'kategori_informasi' => $this->input->post('kategori_informasi',TRUE),
+        'kategori_informasi' => $this->input->post('kategori_informasi',TRUE),
+		'file' => $file,
 	    );
 
             $this->Devisi_model->insert($data);
@@ -125,7 +130,8 @@ class Devisi extends CI_Controller
 		'waktu_pembuatan' => set_value('waktu_pembuatan', $row->waktu_pembuatan),
 		'bentuk_informasi' => set_value('bentuk_informasi', $row->bentuk_informasi),
 		'jangka_waktu' => set_value('jangka_waktu', $row->jangka_waktu),
-		'kategori_informasi' => set_value('kategori_informasi', $row->kategori_informasi),
+        'kategori_informasi' => set_value('kategori_informasi', $row->kategori_informasi),
+		'file' => set_value('file', $row->file),
 	    );
             $this->load->view('v_index', $data);
         } else {

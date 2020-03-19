@@ -1,8 +1,7 @@
 
         <div class="row" style="margin-bottom: 10px">
             <div class="col-md-4">
-                <?php echo anchor(site_url('devisi/create'),'Create', 'class="btn btn-primary"'); ?>
-                <a href="app/cetak_upload_informasi" target="_blank" class="btn btn-info">Cetak</a>
+                <?php //echo anchor(site_url('keberatan_informasi/create'),'Create', 'class="btn btn-primary"'); ?>
             </div>
             <div class="col-md-4 text-center">
                 <div style="margin-top: 8px" id="message">
@@ -12,7 +11,7 @@
             <div class="col-md-1 text-right">
             </div>
             <div class="col-md-3 text-right">
-                <form action="<?php echo site_url('devisi/index'); ?>" class="form-inline" method="get">
+                <form action="<?php echo site_url('keberatan_informasi/index'); ?>" class="form-inline" method="get">
                     <div class="input-group">
                         <input type="text" class="form-control" name="q" value="<?php echo $q; ?>">
                         <span class="input-group-btn">
@@ -20,7 +19,7 @@
                                 if ($q <> '')
                                 {
                                     ?>
-                                    <a href="<?php echo site_url('devisi'); ?>" class="btn btn-default">Reset</a>
+                                    <a href="<?php echo site_url('keberatan_informasi'); ?>" class="btn btn-default">Reset</a>
                                     <?php
                                 }
                             ?>
@@ -33,32 +32,42 @@
         <table class="table table-bordered" style="margin-bottom: 10px">
             <tr>
                 <th>No</th>
-		<th>Ringkasan Informasi</th>
-		<th>Penjabat Yang Menguasai Informasi</th>
-		<th>Penanggung Jawab</th>
-		<th>Waktu Pembuatan</th>
-		<th>Bentuk Informasi</th>
-		<th>Jangka Waktu</th>
-		<th>Kategori Informasi</th>
+		<th>No Pendaftaran</th>
+		<th>Tujuan Informasi</th>
+		<th>Nama</th>
+		<th>Alamat</th>
+		<th>Pekerjaan</th>
+		<th>No Telp</th>
+		<!-- <th>Nama Kuasa</th>
+		<th>Alamat Kuasa</th>
+		<th>No Telp Kuasa</th>
+		<th>Alasan Pengajuan</th>
+		<th>Kasus Posisi</th> -->
 		<th>Action</th>
             </tr><?php
-            foreach ($devisi_data as $devisi)
+            foreach ($keberatan_informasi_data as $keberatan_informasi)
             {
                 ?>
                 <tr>
 			<td width="80px"><?php echo ++$start ?></td>
-			<td><?php echo $devisi->ringkasan_informasi ?></td>
-			<td><?php echo $devisi->penjabat_yang_menguasai_informasi ?></td>
-			<td><?php echo $devisi->penanggung_jawab ?></td>
-			<td><?php echo $devisi->waktu_pembuatan ?></td>
-			<td><?php echo $devisi->bentuk_informasi ?></td>
-			<td><?php echo $devisi->jangka_waktu ?></td>
-			<td><?php echo $devisi->kategori_informasi ?></td>
+			<td><?php echo $keberatan_informasi->no_pendaftaran ?></td>
+			<td><?php echo $keberatan_informasi->tujuan_informasi ?></td>
+			<td><?php echo $keberatan_informasi->nama ?></td>
+			<td><?php echo $keberatan_informasi->alamat ?></td>
+			<td><?php echo $keberatan_informasi->pekerjaan ?></td>
+			<td><?php echo $keberatan_informasi->no_telp ?></td>
+			<!-- <td><?php echo $keberatan_informasi->nama_kuasa ?></td>
+			<td><?php echo $keberatan_informasi->alamat_kuasa ?></td>
+			<td><?php echo $keberatan_informasi->no_telp_kuasa ?></td>
+			<td><?php echo $keberatan_informasi->alasan_pengajuan ?></td>
+			<td><?php echo $keberatan_informasi->kasus_posisi ?></td> -->
 			<td style="text-align:center" width="200px">
 				<?php 
-				echo anchor(site_url('devisi/update/'.$devisi->id),'<span class="label label-info">Ubah</span>'); 
+                echo anchor(site_url('keberatan_informasi/read/'.$keberatan_informasi->id),'<span class="label label-success">Detail</span>'); 
+                echo ' | '; 
+				echo anchor(site_url('keberatan_informasi/update/'.$keberatan_informasi->id),'<span class="label label-info">Ubah</span>'); 
 				echo ' | '; 
-				echo anchor(site_url('devisi/delete/'.$devisi->id),'<span class="label label-danger">Hapus</span>','onclick="javasciprt: return confirm(\'Are You Sure ?\')"'); 
+				echo anchor(site_url('keberatan_informasi/delete/'.$keberatan_informasi->id),'<span class="label label-danger">Hapus</span>','onclick="javasciprt: return confirm(\'Are You Sure ?\')"'); 
 				?>
 			</td>
 		</tr>

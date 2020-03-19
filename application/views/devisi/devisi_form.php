@@ -1,8 +1,21 @@
 
-        <form action="<?php echo $action; ?>" method="post">
+        <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
 	    <div class="form-group">
             <label for="ringkasan_informasi">Ringkasan Isi Informasi <?php echo form_error('ringkasan_informasi') ?></label>
             <textarea class="form-control textarea_editor" rows="3" name="ringkasan_informasi" id="ringkasan_informasi" placeholder="Ringkasan Informasi"><?php echo $ringkasan_informasi; ?></textarea>
+        </div>
+        <div class="form-group">
+            <label>Upload File</label><br>
+            <?php 
+            if ($file == '') {
+                # code...
+            } else {
+            ?>
+            <p>*) File Sebelumnya : <a href="image/file/<?php echo $file ?>" target="_blank"><?php echo $file ?></a></p>
+            <?php } ?>
+            
+            <input type="file" name="userfile" class="form-control" required>
+            <p style="color: red">*) File yang bisa diupload bertipe docx | xls | xlsx</p>
         </div>
 	    <div class="form-group">
             <label for="varchar">Penjabat/Unit/Satker Yang Menguasai Informasi <?php echo form_error('penjabat_yang_menguasai_informasi') ?></label>
@@ -24,6 +37,7 @@
             <label for="varchar">Jangka Waktu pemyimpanan/retensi Arsip<?php echo form_error('jangka_waktu') ?></label>
             <input type="text" class="form-control" name="jangka_waktu" id="jangka_waktu" placeholder="Jangka Waktu" value="<?php echo $jangka_waktu; ?>" />
         </div>
+        
 	    <div class="form-group">
             <label for="varchar">Kategori Informasi <?php echo form_error('kategori_informasi') ?></label>
             <!-- <input type="text" class="form-control" name="kategori_informasi" id="kategori_informasi" placeholder="Kategori Informasi" value="<?php echo $kategori_informasi; ?>" /> -->
