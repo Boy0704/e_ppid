@@ -8,6 +8,7 @@
   <title>Sistem Informasi PPDID</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
+  <base href="<?php echo base_url() ?>">
 
   <!-- Favicons -->
   <link href="front/img/favicon.png" rel="icon">
@@ -59,7 +60,7 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
 
-    <div class="container">
+    <!-- <div class="container">
       <div class="row">
         <div class="col-lg-6 d-lg-flex flex-lg-column justify-content-center align-items-stretch pt-5 pt-lg-0 order-2 order-lg-1" data-aos="fade-up">
           <div>
@@ -72,7 +73,7 @@
           <img src="front/img/hero-img.png" class="img-fluid" alt="">
         </div>
       </div>
-    </div>
+    </div> -->
 
   </section><!-- End Hero -->
 
@@ -83,6 +84,92 @@
   $t_kosong ="Inputan tidak boleh kosong !";
   $t_email ="Email tidak boleh kosong !";
    ?>
+
+    <!-- ======= Permohonan Informasi Section ======= -->
+    <section id="form1" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Permohonan Informasi</h2>
+          <p>Silahkan input form berikut.</p>
+        </div>
+
+        <div class="row">
+
+          
+
+          <div class="col-lg-12">
+            <form action="web/simpan_permohonan_informasi" method="post" role="form" class="php-email-form">
+              <div class="form-group">
+                <input placeholder="Nama Lengkap" type="text" name="nama" class="form-control" id="name" data-rule="required" data-msg="<?php echo $t_kosong ?>" />
+                <div class="validate"></div>
+              </div>
+
+              <div class="form-group">
+                <input placeholder="Pekerjaan" type="text" name="pekerjaan" class="form-control" id="pekerjaan" data-rule="required" data-msg="<?php echo $t_kosong ?>" />
+                <div class="validate"></div>
+              </div>
+
+              <div class="form-group">
+                <input placeholder="No Telp / HP" type="text" name="no_telp" class="form-control" id="no_telp" data-rule="required" data-msg="<?php echo $t_kosong ?>" />
+                <div class="validate"></div>
+              </div>
+
+
+              <div class="form-group">
+                <input placeholder="Your Email" type="email" class="form-control" name="email" id="email" data-rule="email" data-msg="<?php echo $t_email ?>" />
+                <div class="validate"></div>
+              </div>
+
+              
+              <div class="form-group">
+                <textarea placeholder="Rincian Informasi yang dibutuhkan" class="form-control" name="informasi_dibutuhkan" rows="5" data-rule="required" data-msg="<?php echo $t_kosong ?>"></textarea>
+                <div class="validate"></div>
+              </div>
+
+              <div class="form-group">
+                <textarea placeholder="Tujuan Penggunaan Informasi" class="form-control" name="tujuan" rows="5" data-rule="required" data-msg="<?php echo $t_kosong ?>"></textarea>
+                <div class="validate"></div>
+              </div>
+
+              <div class="form-group">
+                <label>Cara memperoleh informasi (opsi 1)</label><br>
+                <input type="radio" name="cara1" value="Melihat" required=""> Melihat
+                <input type="radio" name="cara1" value="Membaca" required=""> Membaca
+                <input type="radio" name="cara1" value="Mendengarkan" required=""> Mendengarkan
+                <input type="radio" name="cara1" value="Mencatat" required=""> Mencatat
+              </div>
+
+              <div class="form-group">
+                <label>Cara memperoleh informasi (opsi 2)</label><br>
+                <input type="radio" name="cara2" value="Hardcopy" required=""> Hardcopy
+                <input type="radio" name="cara2" value="Softcopy" required=""> Softcopy
+                
+              </div>
+
+              <div class="form-group">
+                <label>Cara mendapatkan salinan informasi </label><br>
+                <input type="radio" name="salinan_informasi" value="Mengambil langsung" required=""> Mengambil langsung
+                <input type="radio" name="salinan_informasi" value="Kurir" required=""> Kurir
+                <input type="radio" name="salinan_informasi" value="Pos" required=""> Pos
+                <input type="radio" name="salinan_informasi" value="Faksimili" required=""> Faksimili
+                <input type="radio" name="salinan_informasi" value="Email" required=""> Email
+                
+              </div>
+
+              <div class="mb-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Terima Kasih Telah Mengisi Form Ini !</div>
+              </div>
+              <div class="text-center"><button type="submit">Kirim</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Permohonan Informasi Section -->
 
     
 

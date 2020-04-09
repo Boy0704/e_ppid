@@ -8,6 +8,7 @@
   <title>Sistem Informasi PPDID</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
+  <base href="<?php echo base_url() ?>">
 
   <!-- Favicons -->
   <link href="front/img/favicon.png" rel="icon">
@@ -59,7 +60,7 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
 
-    <div class="container">
+    <!-- <div class="container">
       <div class="row">
         <div class="col-lg-6 d-lg-flex flex-lg-column justify-content-center align-items-stretch pt-5 pt-lg-0 order-2 order-lg-1" data-aos="fade-up">
           <div>
@@ -72,7 +73,7 @@
           <img src="front/img/hero-img.png" class="img-fluid" alt="">
         </div>
       </div>
-    </div>
+    </div> -->
 
   </section><!-- End Hero -->
 
@@ -85,6 +86,104 @@
    ?>
 
     
+    <!-- ======= Pengajuan Keberatan Section ======= -->
+    <section id="form2" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Form Pengajuan Keberatan Informasi</h2>
+          <p>Silahkan input form berikut.</p>
+        </div>
+
+        <div class="row">
+
+          
+
+          <div class="col-lg-12">
+            <form action="web/simpan_keberatan_informasi" method="post" role="form" class="php-email-form">
+
+              <div class="alert alert-info" style="margin-top:50px;">Informasi Pengaju Keberatan</div>
+
+              <div class="form-group">
+                <label>No Pendaftaran</label>
+                <input placeholder="" type="text" name="no_pendaftaran" class="form-control" id="no_pendaftaran" data-rule="required" value="<?php echo create_random(10) ?>" data-msg="<?php echo $t_kosong ?>" readonly />
+                <div class="validate"></div>
+              </div>
+
+              <div class="form-group">
+                <textarea placeholder="Tujuan Penggunaan Informasi" class="form-control" name="tujuan_informasi" rows="5" data-rule="required" data-msg="<?php echo $t_kosong ?>"></textarea>
+                <div class="validate"></div>
+              </div>
+
+              <div class="alert alert-info" style="margin-top:50px;">Identitas Pemohon</div>
+
+              <div class="form-group">
+                <input placeholder="Nama Lengkap" type="text" name="nama" class="form-control" id="name" data-rule="required" data-msg="<?php echo $t_kosong ?>" />
+                <div class="validate"></div>
+              </div>
+
+              <div class="form-group">
+                <textarea placeholder="Alamat" class="form-control" name="alamat" rows="5" data-rule="required" data-msg="<?php echo $t_kosong ?>"></textarea>
+                <div class="validate"></div>
+              </div>
+
+              <div class="form-group">
+                <input placeholder="Pekerjaan" type="text" name="pekerjaan" class="form-control" id="pekerjaan" data-rule="required" data-msg="<?php echo $t_kosong ?>" />
+                <div class="validate"></div>
+              </div>
+
+              <div class="form-group">
+                <input placeholder="No Telp / HP" type="text" name="no_telp" class="form-control" id="no_telp" data-rule="required" data-msg="<?php echo $t_kosong ?>" />
+                <div class="validate"></div>
+              </div>
+
+              <div class="alert alert-info" style="margin-top:50px;">Identitas Kuasa Pemohon</div>
+
+
+              <div class="form-group">
+                <input placeholder="Nama Kuasa" type="text" name="nama_kuasa" class="form-control" id="name" data-rule="required" data-msg="<?php echo $t_kosong ?>" />
+                <div class="validate"></div>
+              </div>
+
+              <div class="form-group">
+                <textarea placeholder="Alamat Kuasa" class="form-control" name="alamat_kuasa" rows="5" data-rule="required" data-msg="<?php echo $t_kosong ?>"></textarea>
+                <div class="validate"></div>
+              </div>
+
+              
+
+              <div class="form-group">
+                <input placeholder="No Telp/HP Kuasa" type="text" name="no_telp_kuasa" class="form-control" id="no_telp" data-rule="required" data-msg="<?php echo $t_kosong ?>" />
+                <div class="validate"></div>
+              </div>
+
+              
+              <div class="form-group">
+                <textarea placeholder="Alasan Pengajuan Keberatan" class="form-control" name="alasan_pengajuan" rows="5" data-rule="required" data-msg="<?php echo $t_kosong ?>"></textarea>
+                <div class="validate"></div>
+              </div>
+
+              <div class="form-group">
+                <textarea placeholder="Kasus Posisi" class="form-control" name="kasus_posisi" rows="5" data-rule="required" data-msg="<?php echo $t_kosong ?>"></textarea>
+                <div class="validate"></div>
+              </div>
+
+              
+
+              <div class="mb-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Terima Kasih Telah Mengisi Form Ini !</div>
+              </div>
+              <div class="text-center"><button type="submit">Kirim</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Pengajuan Keberatan Section -->
+
 
   </main><!-- End #main -->
 

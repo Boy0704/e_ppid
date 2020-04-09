@@ -9,6 +9,20 @@ class Web extends CI_Controller {
 		$this->load->view('f_home');
 	}
 
+	public function form1()
+	{
+		$this->load->view('f_form1');
+	}
+
+	public function form2()
+	{
+		$this->load->view('f_form2');
+	}
+	public function form3()
+	{
+		$this->load->view('f_form3');
+	}
+
 	public function simpan_permohonan_informasi()
 	{
 		$this->db->insert('permohonan_informasi', $_POST);
