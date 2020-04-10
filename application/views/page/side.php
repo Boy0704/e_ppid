@@ -30,7 +30,22 @@
         <li><a href="app"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
         
         <li><a href="devisi"><i class="fa fa-keyboard-o"></i> <span>Master Upload Informasi</span></a></li>
-        <li class="treeview">
+        <li><a href="permohonan_informasi"><i class="fa fa-angle-double-right"></i> <span>Permohonan Informasi</span>
+          <span class="pull-right-container">
+              <small class="label pull-right bg-blue"><?php echo $this->db->get_where('permohonan_informasi', array('dilihat'=>'0'))->num_rows(); ?></small>
+            </span>
+        </a></li>
+        <li><a href="keberatan_informasi"><i class="fa fa-angle-double-right"></i> <span>Keberatan Informasi</span>
+        <span class="pull-right-container">
+              <small class="label pull-right bg-red"><?php echo $this->db->get_where('keberatan_informasi', array('dilihat'=>'0'))->num_rows(); ?></small>
+            </span>
+          </a></li>
+        <li><a href="aduan_pelanggaran"><i class="fa fa-angle-double-right"></i> <span>Aduan Pelanggaran</span>
+        <span class="pull-right-container">
+              <small class="label pull-right bg-green"><?php echo $this->db->get_where('aduan_pelanggaran', array('dilihat'=>'0'))->num_rows(); ?></small>
+            </span>
+          </a></li>
+       <!--  <li class="treeview">
           <a href="#">
               <i class="fa fa-list"></i>
               <span>Master Pelayanan</span>
@@ -40,9 +55,8 @@
               <li><a href="permohonan_informasi"><i class="fa fa-angle-double-right"></i> Permohonan Informasi</a></li>
               <li><a href="keberatan_informasi"><i class="fa fa-angle-double-right"></i> Pengajuan Keberatan Informasi</a></li>
               <li><a href="aduan_pelanggaran"><i class="fa fa-angle-double-right"></i> Aduan Pelanggaran</a></li>
-              <!-- <li><a href="stok"><i class="fa fa-angle-double-right"></i> Stok</a></li> -->
           </ul>
-        </li>
+        </li> -->
         
         
         <li><a href="a_user"><i class="fa fa-users"></i> <span>Manajemen User</span></a></li>

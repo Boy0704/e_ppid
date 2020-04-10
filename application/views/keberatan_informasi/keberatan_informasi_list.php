@@ -63,7 +63,7 @@
 			<td><?php echo $keberatan_informasi->kasus_posisi ?></td> -->
 			<td style="text-align:center" width="200px">
 				<?php 
-                echo anchor(site_url('keberatan_informasi/read/'.$keberatan_informasi->id),'<span class="label label-success">Detail</span>'); 
+                echo anchor(site_url('keberatan_informasi/read/'.$keberatan_informasi->id),'<span class="label label-success">Lihat</span>'); 
                 echo ' | '; 
 				echo anchor(site_url('keberatan_informasi/update/'.$keberatan_informasi->id),'<span class="label label-info">Ubah</span>'); 
 				echo ' | '; 

@@ -65,7 +65,7 @@
 			<td><?php echo $aduan_pelanggaran->uraian_singkat ?></td> -->
 			<td style="text-align:center" width="200px">
 				<?php 
-                echo anchor(site_url('aduan_pelanggaran/read/'.$aduan_pelanggaran->id),'<span class="label label-success">Detail</span>'); 
+                echo anchor(site_url('aduan_pelanggaran/read/'.$aduan_pelanggaran->id),'<span class="label label-success">Lihat</span>'); 
                 echo ' | '; 
 				echo anchor(site_url('aduan_pelanggaran/update/'.$aduan_pelanggaran->id),'<span class="label label-info">Ubah</span>'); 
 				echo ' | '; 

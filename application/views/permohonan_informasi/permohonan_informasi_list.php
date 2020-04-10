@@ -59,7 +59,7 @@
 			<td><?php echo $permohonan_informasi->salinan_informasi ?></td> -->
 			<td style="text-align:center" width="200px">
 				<?php 
-                echo anchor(site_url('permohonan_informasi/read/'.$permohonan_informasi->id),'<span class="label label-success">Detail</span>'); 
+                echo anchor(site_url('permohonan_informasi/read/'.$permohonan_informasi->id),'<span class="label label-success">Lihat</span>'); 
                 echo ' | '; 
 				echo anchor(site_url('permohonan_informasi/update/'.$permohonan_informasi->id),'<span class="label label-info">Ubah</span>'); 
 				echo ' | '; 

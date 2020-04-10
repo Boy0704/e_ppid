@@ -34,7 +34,6 @@
                 <th>No</th>
 		<th>Nama Lengkap</th>
 		<th>Username</th>
-		<th>Password</th>
 		<th>Level</th>
 		<th>Foto</th>
 		<th>Action</th>
@@ -46,7 +45,6 @@
 			<td width="80px"><?php echo ++$start ?></td>
 			<td><?php echo $a_user->nama_lengkap ?></td>
 			<td><?php echo $a_user->username ?></td>
-			<td><?php echo $a_user->password ?></td>
 			<td><?php echo $a_user->level ?></td>
 			<td><img src="image/user/<?php echo $a_user->foto ?>" style="width: 100px;"></td>
 			<td style="text-align:center" width="200px">

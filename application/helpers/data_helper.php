@@ -1,5 +1,13 @@
 <?php 
 
+function c_bln($table,$bulan)
+{
+	$CI =& get_instance();
+	$tahun = date('Y');
+	$d = $CI->db->query("SELECT * FROM $table WHERE date_create LIKE '$tahun-$bulan%' ")->num_rows();
+	return $d;
+}
+
 function stok_display($id_subkategori)
 {
 	$CI =& get_instance();

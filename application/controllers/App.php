@@ -29,6 +29,18 @@ class App extends CI_Controller {
 		$this->load->view('v_index', $data);
     }
 
+    public function cetak_upload_informasi()
+    {
+    	$this->load->view('cetak_upload_informasi');
+    }
+
+    public function tes()
+    {
+    	$this->load->view('welcome_message');
+    }
+
+
+
    
 	
 

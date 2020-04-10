@@ -1,4 +1,7 @@
-
+<?php 
+$this->db->where('id', $id);
+$this->db->update('permohonan_informasi', array('dilihat'=>'1'));
+ ?>
         <table class="table">
 	    <tr><td>Nama</td><td><?php echo $nama; ?></td></tr>
 	    <tr><td>Pekerjaan</td><td><?php echo $pekerjaan; ?></td></tr>

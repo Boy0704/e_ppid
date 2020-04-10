@@ -1,4 +1,7 @@
-
+<?php 
+$this->db->where('id', $id);
+$this->db->update('aduan_pelanggaran', array('dilihat'=>'1'));
+ ?>
         <table class="table">
 	    <tr><td>Nama Lengkap</td><td><?php echo $nama; ?></td></tr>
 	    <tr><td>Alamat</td><td><?php echo $alamat; ?></td></tr>

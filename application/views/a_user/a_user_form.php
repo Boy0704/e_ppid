@@ -1,5 +1,5 @@
 
-        <form action="<?php echo $action; ?>" method="post">
+        <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
 	    <div class="form-group">
             <label for="varchar">Nama Lengkap <?php echo form_error('nama_lengkap') ?></label>
             <input type="text" class="form-control" name="nama_lengkap" id="nama_lengkap" placeholder="Nama Lengkap" value="<?php echo $nama_lengkap; ?>" />
@@ -10,7 +10,11 @@
         </div>
 	    <div class="form-group">
             <label for="varchar">Password <?php echo form_error('password') ?></label>
-            <input type="text" class="form-control" name="password" id="password" placeholder="Password" value="<?php echo $password; ?>" />
+            <input type="text" class="form-control" name="password" id="password" placeholder="Password" value="" />
+            <div>
+                *) Kosongkan, jika tidak dirubah
+            </div>
+            <input type="hidden" name="password_old" value="<?php echo $password ?>">
         </div>
 	    <div class="form-group">
             <label for="varchar">Level <?php echo form_error('level') ?></label>
@@ -25,6 +29,13 @@
 	    <div class="form-group">
             <label for="varchar">Foto <?php echo form_error('foto') ?></label>
             <input type="file" class="form-control" name="foto" id="foto" placeholder="Foto" value="<?php echo $foto; ?>" />
+            <input type="hidden" name="foto_old" value="<?php echo $foto ?>">
+            <div>
+                <?php if ($foto != ''): ?>
+                    <b>*) Foto Sebelumnya : </b><br>
+                    <img src="image/user/<?php echo $foto ?>" style="width: 100px;">
+                <?php endif ?>
+            </div>
         </div>
 	    <input type="hidden" name="id_user" value="<?php echo $id_user; ?>" /> 
 	    <button type="submit" class="btn btn-primary"><?php echo $button ?></button> 
