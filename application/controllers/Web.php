@@ -25,6 +25,8 @@ class Web extends CI_Controller {
 
 	public function simpan_permohonan_informasi()
 	{
+		$ktp = upload_gambar_biasa('identitas_', 'image/file/', 'jpeg|jpg|pdf|png', 10000, 'userfile');
+		$_POST['upload_identitas'] = $ktp;
 		$this->db->insert('permohonan_informasi', $_POST);
 		$this->session->set_flashdata('message', alert_biasa('Permohonan Informasi Berhasil disimpan !','success'));
 		redirect('web','refresh');

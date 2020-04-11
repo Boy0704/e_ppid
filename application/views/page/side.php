@@ -26,7 +26,7 @@
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
         
-        
+        <?php if ($this->session->userdata('level') == 'admin') { ?>
         <li><a href="app"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
         
         <li><a href="devisi"><i class="fa fa-keyboard-o"></i> <span>Master Upload Informasi</span></a></li>
@@ -60,6 +60,41 @@
         
         
         <li><a href="a_user"><i class="fa fa-users"></i> <span>Manajemen User</span></a></li>
+      <?php } elseif($this->session->userdata('level') == 'devisi') {  ?>
+        <li><a href="devisi"><i class="fa fa-keyboard-o"></i> <span>Master Upload Informasi</span></a></li>
+        <li><a href="permohonan_informasi"><i class="fa fa-angle-double-right"></i> <span>Permohonan Informasi</span>
+          <span class="pull-right-container">
+              <small class="label pull-right bg-blue"><?php echo $this->db->get_where('permohonan_informasi', array('dilihat'=>'0'))->num_rows(); ?></small>
+            </span>
+        </a></li>
+        <li><a href="keberatan_informasi"><i class="fa fa-angle-double-right"></i> <span>Keberatan Informasi</span>
+        <span class="pull-right-container">
+              <small class="label pull-right bg-red"><?php echo $this->db->get_where('keberatan_informasi', array('dilihat'=>'0'))->num_rows(); ?></small>
+            </span>
+          </a></li>
+        <li><a href="aduan_pelanggaran"><i class="fa fa-angle-double-right"></i> <span>Aduan Pelanggaran</span>
+        <span class="pull-right-container">
+              <small class="label pull-right bg-green"><?php echo $this->db->get_where('aduan_pelanggaran', array('dilihat'=>'0'))->num_rows(); ?></small>
+            </span>
+          </a></li>
+        <?php }elseif($this->session->userdata('level') == 'pelayanan'){ ?>
+        
+        <li><a href="permohonan_informasi"><i class="fa fa-angle-double-right"></i> <span>Permohonan Informasi</span>
+          <span class="pull-right-container">
+              <small class="label pull-right bg-blue"><?php echo $this->db->get_where('permohonan_informasi', array('dilihat'=>'0'))->num_rows(); ?></small>
+            </span>
+        </a></li>
+        <li><a href="keberatan_informasi"><i class="fa fa-angle-double-right"></i> <span>Keberatan Informasi</span>
+        <span class="pull-right-container">
+              <small class="label pull-right bg-red"><?php echo $this->db->get_where('keberatan_informasi', array('dilihat'=>'0'))->num_rows(); ?></small>
+            </span>
+          </a></li>
+        <li><a href="aduan_pelanggaran"><i class="fa fa-angle-double-right"></i> <span>Aduan Pelanggaran</span>
+        <span class="pull-right-container">
+              <small class="label pull-right bg-green"><?php echo $this->db->get_where('aduan_pelanggaran', array('dilihat'=>'0'))->num_rows(); ?></small>
+            </span>
+          </a></li>
+        <?php } ?>
 
         <li class="header">LABELS</li>
         <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Faqs</span></a></li>

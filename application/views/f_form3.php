@@ -131,9 +131,45 @@
                 <div class="validate"></div>
               </div>
 
+
+              <div class="alert alert-info" style="margin-top:50px;">Peristiwa yang dilaporkan</div>
               
               <div class="form-group">
-                <textarea placeholder="Peristiwa Dugaan Pelanggaran" class="form-control" name="peristiwa" rows="5" data-rule="required" data-msg="<?php echo $t_kosong ?>"></textarea>
+                <input placeholder="Peristiwa" type="text" name="peristiwa" class="form-control" id="peristiwa" data-rule="required" data-msg="<?php echo $t_kosong ?>" />
+                <div class="validate"></div>
+              </div>
+
+              <div class="form-group">
+                <input placeholder="Tempat kejadian" type="text" name="tempat_kejadian" class="form-control" id="tempat_kejadian" data-rule="required" data-msg="<?php echo $t_kosong ?>" />
+                <div class="validate"></div>
+              </div>
+
+              <div class="form-group">
+                <input placeholder="Hari" type="text" class="form-control" id="tempat_kejadian" data-rule="required" data-msg="<?php echo $t_kosong ?>" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <input placeholder="Tanggal" type="date" name="tgl_kejadian" class="form-control" id="tgl_kejadian" data-rule="required" data-msg="<?php echo $t_kosong ?>" />
+                <div class="validate"></div>
+              </div>
+
+              <div class="form-group">
+                <input placeholder="Waktu Kejadian" type="time" name="waktu_kejadian" class="form-control" id="waktu_kejadian" data-rule="required" data-msg="<?php echo $t_kosong ?>" />
+                <div class="validate"></div>
+              </div>
+
+              <div class="form-group">
+                <input placeholder="Terlapor" type="text" name="terlapor" class="form-control" id="terlapor" data-rule="required" data-msg="<?php echo $t_kosong ?>" />
+                <div class="validate"></div>
+              </div>
+
+              <div class="form-group">
+                <input placeholder="Alamat Terlapor" type="text" name="alamat_terlapor" class="form-control" id="alamat_terlapor" data-rule="required" data-msg="<?php echo $t_kosong ?>" />
+                <div class="validate"></div>
+              </div>
+
+              <div class="form-group">
+                <input placeholder="No Telp/HP Terlapor" type="text" name="no_telp_terlapor" class="form-control" id="no_telp_terlapor" data-rule="required" data-msg="<?php echo $t_kosong ?>" />
                 <div class="validate"></div>
               </div>
 

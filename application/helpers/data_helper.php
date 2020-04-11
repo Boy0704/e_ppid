@@ -1,4 +1,10 @@
 <?php 
+function hari_id($tanggal)
+{
+  $day = date('D', strtotime($tanggal));
+  $dayList = array( 'Sun'=>'Minggu', 'Mon'=>'Senin', 'Tue'=>'Selasa', 'Wed'=>'Rabu', 'Thu'=>'Kamis', 'Fri'=>"Jum'at", 'Sat'=>'Sabtu');
+  return $dayList[$day];
+}
 
 function c_bln($table,$bulan)
 {

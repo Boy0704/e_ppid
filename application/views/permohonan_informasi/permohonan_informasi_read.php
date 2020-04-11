@@ -4,6 +4,9 @@ $this->db->update('permohonan_informasi', array('dilihat'=>'1'));
  ?>
         <table class="table">
 	    <tr><td>Nama</td><td><?php echo $nama; ?></td></tr>
+	    <tr><td>Identitas</td><td><a href="image/file/<?php echo $upload_identitas; ?>" target="_blank">
+	    		<img src="image/file/<?php echo $upload_identitas; ?>" style="width: 200px; ">
+	    	</a></td></tr>
 	    <tr><td>Pekerjaan</td><td><?php echo $pekerjaan; ?></td></tr>
 	    <tr><td>No Telp</td><td><?php echo $no_telp; ?></td></tr>
 	    <tr><td>Email</td><td><?php echo $email; ?></td></tr>

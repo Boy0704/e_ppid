@@ -29,6 +29,7 @@
                 </form>
             </div>
         </div>
+        <div class="table-responsive">
         <table class="table table-bordered" style="margin-bottom: 10px">
             <tr>
                 <th>No</th>
@@ -63,7 +64,7 @@
 			<td><?php echo $keberatan_informasi->kasus_posisi ?></td> -->
 			<td style="text-align:center" width="200px">
 				<?php 
-                echo anchor(site_url('keberatan_informasi/read/'.$keberatan_informasi->id),'<span class="label label-success">Lihat</span>'); 
+                echo $retVal = ($keberatan_informasi->dilihat == '0') ? anchor(site_url('keberatan_informasi/read/'.$keberatan_informasi->id),'<span class="label label-warning">Belum dilihat</span>') : anchor(site_url('keberatan_informasi/read/'.$keberatan_informasi->id),'<span class="label label-success">Detail</span>') ; 
                 echo ' | '; 
 				echo anchor(site_url('keberatan_informasi/update/'.$keberatan_informasi->id),'<span class="label label-info">Ubah</span>'); 
 				echo ' | '; 
@@ -75,6 +76,7 @@
             }
             ?>
         </table>
+        </div>
         <div class="row">
             <div class="col-md-6">
                 <a href="#" class="btn btn-primary">Total Record : <?php echo $total_rows ?></a>

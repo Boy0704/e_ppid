@@ -29,6 +29,7 @@
                 </form>
             </div>
         </div>
+        <div class="table-responsive">
         <table class="table table-bordered" style="margin-bottom: 10px">
             <tr>
                 <th>No</th>
@@ -53,7 +54,11 @@
 			<td width="80px"><?php echo ++$start ?></td>
 			<td><?php echo $aduan_pelanggaran->nama ?></td>
 			<td><?php echo $aduan_pelanggaran->alamat ?></td>
-			<td><?php echo $aduan_pelanggaran->upload_identitas ?></td>
+			<td>
+                <a href="image/file/<?php echo $aduan_pelanggaran->upload_identitas ?>" target="_blank">
+                    <img src="image/file/<?php echo $aduan_pelanggaran->upload_identitas ?>" style="width: 100px;">
+                </a>         
+            </td>
 			<td><?php echo $aduan_pelanggaran->no_telp ?></td>
 			<td><?php echo $aduan_pelanggaran->email ?></td>
 			<!-- <td><?php echo $aduan_pelanggaran->peristiwa ?></td>
@@ -65,7 +70,7 @@
 			<td><?php echo $aduan_pelanggaran->uraian_singkat ?></td> -->
 			<td style="text-align:center" width="200px">
 				<?php 
-                echo anchor(site_url('aduan_pelanggaran/read/'.$aduan_pelanggaran->id),'<span class="label label-success">Lihat</span>'); 
+                echo $retVal = ($aduan_pelanggaran->dilihat == '0') ? anchor(site_url('aduan_pelanggaran/read/'.$aduan_pelanggaran->id),'<span class="label label-warning">Belum dilihat</span>') : anchor(site_url('aduan_pelanggaran/read/'.$aduan_pelanggaran->id),'<span class="label label-success">Detail</span>') ; 
                 echo ' | '; 
 				echo anchor(site_url('aduan_pelanggaran/update/'.$aduan_pelanggaran->id),'<span class="label label-info">Ubah</span>'); 
 				echo ' | '; 
@@ -77,6 +82,7 @@
             }
             ?>
         </table>
+        </div>
         <div class="row">
             <div class="col-md-6">
                 <a href="#" class="btn btn-primary">Total Record : <?php echo $total_rows ?></a>

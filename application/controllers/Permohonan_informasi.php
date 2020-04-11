@@ -59,7 +59,8 @@ class Permohonan_informasi extends CI_Controller
 		'tujuan' => $row->tujuan,
 		'cara1' => $row->cara1,
 		'cara2' => $row->cara2,
-		'salinan_informasi' => $row->salinan_informasi,
+        'salinan_informasi' => $row->salinan_informasi,
+		'upload_identitas' => $row->upload_identitas,
         'judul_page' => 'permohonan_informasi/permohonan_informasi_Detail',
             'konten' => 'permohonan_informasi/permohonan_informasi_read',
 	    );
@@ -86,7 +87,8 @@ class Permohonan_informasi extends CI_Controller
 	    'tujuan' => set_value('tujuan'),
 	    'cara1' => set_value('cara1'),
 	    'cara2' => set_value('cara2'),
-	    'salinan_informasi' => set_value('salinan_informasi'),
+        'salinan_informasi' => set_value('salinan_informasi'),
+	    'upload_identitas' => set_value('upload_identitas'),
 	);
         $this->load->view('v_index', $data);
     }
@@ -107,7 +109,8 @@ class Permohonan_informasi extends CI_Controller
 		'tujuan' => $this->input->post('tujuan',TRUE),
 		'cara1' => $this->input->post('cara1',TRUE),
 		'cara2' => $this->input->post('cara2',TRUE),
-		'salinan_informasi' => $this->input->post('salinan_informasi',TRUE),
+        'salinan_informasi' => $this->input->post('salinan_informasi',TRUE),
+		'upload_identitas' => $this->input->post('upload_identitas',TRUE),
 	    );
 
             $this->Permohonan_informasi_model->insert($data);
@@ -135,7 +138,8 @@ class Permohonan_informasi extends CI_Controller
 		'tujuan' => set_value('tujuan', $row->tujuan),
 		'cara1' => set_value('cara1', $row->cara1),
 		'cara2' => set_value('cara2', $row->cara2),
-		'salinan_informasi' => set_value('salinan_informasi', $row->salinan_informasi),
+        'salinan_informasi' => set_value('salinan_informasi', $row->salinan_informasi),
+		'upload_identitas' => set_value('upload_identitas', $row->upload_identitas),
 	    );
             $this->load->view('v_index', $data);
         } else {
@@ -160,7 +164,8 @@ class Permohonan_informasi extends CI_Controller
 		'tujuan' => $this->input->post('tujuan',TRUE),
 		'cara1' => $this->input->post('cara1',TRUE),
 		'cara2' => $this->input->post('cara2',TRUE),
-		'salinan_informasi' => $this->input->post('salinan_informasi',TRUE),
+        'salinan_informasi' => $this->input->post('salinan_informasi',TRUE),
+		'upload_identitas' => $this->input->post('upload_identitas',TRUE),
 	    );
 
             $this->Permohonan_informasi_model->update($this->input->post('id', TRUE), $data);

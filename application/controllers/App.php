@@ -7,7 +7,7 @@ class App extends CI_Controller {
 	
 	public function index()
 	{
-        if ($this->session->userdata('level') != 'admin') {
+        if ($this->session->userdata('level') == '') {
             redirect('login');
         }
 		$data = array(

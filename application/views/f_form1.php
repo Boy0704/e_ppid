@@ -99,9 +99,16 @@
           
 
           <div class="col-lg-12">
-            <form action="web/simpan_permohonan_informasi" method="post" role="form" class="php-email-form">
+            <form action="web/simpan_permohonan_informasi" enctype="multipart/form-data" method="post" role="form" class="php-email-form">
               <div class="form-group">
                 <input placeholder="Nama Lengkap" type="text" name="nama" class="form-control" id="name" data-rule="required" data-msg="<?php echo $t_kosong ?>" />
+                <div class="validate"></div>
+              </div>
+
+              <div class="form-group">
+                <label>Upload Identitas (KTP/SIM/PASPORT)</label>
+                <input type="file" name="userfile" class="form-control" id="userfiler" data-rule="required" data-msg="<?php echo $t_kosong ?>" />
+                <br><p style="color: blue">*) File yang bisa diupload bertipe JPG | JPEG | PNG</p>
                 <div class="validate"></div>
               </div>
 

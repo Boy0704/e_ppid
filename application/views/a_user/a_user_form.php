@@ -21,9 +21,9 @@
             <!-- <input type="text" class="form-control" name="level" id="level" placeholder="Level" value="<?php echo $level; ?>" /> -->
             <select name="level" class="form-control">
                 <option value="<?php echo $level ?>"><?php echo $level ?></option>
-                <option value="Admin">Admin</option>
-                <option value="Devisi">Devisi</option>
-                <option value="Pelayanan">Pelayanan</option>
+                <option value="admin">Admin</option>
+                <option value="devisi">Devisi</option>
+                <option value="pelayanan">Pelayanan</option>
             </select>
         </div>
 	    <div class="form-group">
