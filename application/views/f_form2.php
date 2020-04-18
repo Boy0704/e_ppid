@@ -106,7 +106,7 @@
 
               <div class="form-group">
                 <label>No Pendaftaran</label>
-                <input placeholder="" type="text" name="no_pendaftaran" class="form-control" id="no_pendaftaran" data-rule="required" value="<?php echo create_random(10) ?>" data-msg="<?php echo $t_kosong ?>" readonly />
+                <input placeholder="" type="text" name="no_pendaftaran" class="form-control" id="no_pendaftaran" data-rule="required" value="<?php echo create_random(10) ?>" data-msg="<?php echo $t_kosong ?>" />
                 <div class="validate"></div>
               </div>
 

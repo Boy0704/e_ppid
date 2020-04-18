@@ -6,11 +6,19 @@ function hari_id($tanggal)
   return $dayList[$day];
 }
 
-function c_bln($table,$bulan)
+function c_bln($table,$bulan,$ktg)
 {
 	$CI =& get_instance();
 	$tahun = date('Y');
-	$d = $CI->db->query("SELECT * FROM $table WHERE date_create LIKE '$tahun-$bulan%' ")->num_rows();
+	$d = $CI->db->query("SELECT * FROM $table WHERE date_create LIKE '$tahun-$bulan%' and kategori_informasi ='$ktg' ")->num_rows();
+	return $d;
+}
+
+function t_all($table,$ktg)
+{
+	$CI =& get_instance();
+	$tahun = date('Y');
+	$d = $CI->db->query("SELECT * FROM $table WHERE kategori_informasi ='$ktg' ")->num_rows();
 	return $d;
 }
 

@@ -10,26 +10,26 @@
 
  <!-- Info boxes -->
       <div class="row">
-        <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="col-md-4 col-sm-6 col-xs-12">
           <div class="info-box">
             <span class="info-box-icon bg-aqua"><i class="ion ion-ios-gear-outline"></i></span>
 
             <div class="info-box-content">
-              <span class="info-box-text">Permohonan Informasi</span>
-              <span class="info-box-number"><?php echo $this->db->get('permohonan_informasi')->num_rows(); ?></span>
+              <span class="info-box-text">Informasi Berkala</span>
+              <span class="info-box-number"><?php echo t_all('devisi','Informasi Berkala') ?></span>
             </div>
             <!-- /.info-box-content -->
           </div>
           <!-- /.info-box -->
         </div>
         <!-- /.col -->
-        <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="col-md-4 col-sm-6 col-xs-12">
           <div class="info-box">
             <span class="info-box-icon bg-red"><i class="fa fa-google-plus"></i></span>
 
             <div class="info-box-content">
-              <span class="info-box-text">Pengajuan Keberatan Informasi</span>
-              <span class="info-box-number"><?php echo $this->db->get('keberatan_informasi')->num_rows(); ?></span>
+              <span class="info-box-text">Informasi Setiap Saat</span>
+              <span class="info-box-number"><?php echo t_all('devisi','Informasi Setiap Saat') ?></span>
             </div>
             <!-- /.info-box-content -->
           </div>
@@ -42,13 +42,13 @@
 
         
         <!-- /.col -->
-        <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="col-md-4 col-sm-6 col-xs-12">
           <div class="info-box">
             <span class="info-box-icon bg-yellow"><i class="ion ion-ios-people-outline"></i></span>
 
             <div class="info-box-content">
-              <span class="info-box-text">Aduan Pelanggaran</span>
-              <span class="info-box-number"><?php echo $this->db->get('aduan_pelanggaran')->num_rows(); ?></span>
+              <span class="info-box-text">Informasi Serta Merta</span>
+              <span class="info-box-number"><?php echo t_all('devisi','Informasi Serta Merta') ?></span>
             </div>
             <!-- /.info-box-content -->
           </div>
@@ -103,7 +103,7 @@
 
                   <div class="progress-group">
                     <span class="progress-text">Permohonan Informasi</span>
-                    <!-- <span class="progress-number"><b>160</b></span> -->
+                    <span class="progress-number"><b><?php echo $this->db->get('permohonan_informasi')->num_rows(); ?></b></span>
 
                     <div class="progress sm">
                       <div class="progress-bar progress-bar-aqua" style="width: 80%"></div>
@@ -112,7 +112,7 @@
                   <!-- /.progress-group -->
                   <div class="progress-group">
                     <span class="progress-text">Pengajuan Keberatan Informasi</span>
-                    <!-- <span class="progress-number"><b>310</b></span> -->
+                    <span class="progress-number"><b><?php echo $this->db->get('keberatan_informasi')->num_rows(); ?></b></span>
 
                     <div class="progress sm">
                       <div class="progress-bar progress-bar-red" style="width: 80%"></div>
@@ -121,7 +121,7 @@
                   <!-- /.progress-group -->
                   <div class="progress-group">
                     <span class="progress-text">Aduan Pelanggaran</span>
-                    <!-- <span class="progress-number"><b>480</b></span> -->
+                    <span class="progress-number"><b><?php echo $this->db->get('keberatan_informasi')->num_rows(); ?></b></span>
 
                     <div class="progress sm">
                       <div class="progress-bar progress-bar-green" style="width: 80%"></div>
@@ -212,7 +212,7 @@
     labels  : ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli','Agustus','September','November','Desember'],
     datasets: [
       {
-        label               : 'Permohonan Informasi',
+        label               : 'Informasi Berkala',
         fillColor           : '#00c0ef',
         strokeColor         : '#00c0ef',
         pointColor          : '#00c0ef',
@@ -220,22 +220,22 @@
         pointHighlightFill  : '#fff',
         pointHighlightStroke: '#00c0ef',
         data                : [
-        						<?php echo c_bln('permohonan_informasi','01') ?>,
-        						<?php echo c_bln('permohonan_informasi','02') ?>,
-        						<?php echo c_bln('permohonan_informasi','03') ?>,
-        						<?php echo c_bln('permohonan_informasi','04') ?>,
-        						<?php echo c_bln('permohonan_informasi','05') ?>,
-        						<?php echo c_bln('permohonan_informasi','06') ?>,
-        						<?php echo c_bln('permohonan_informasi','07') ?>,
-        						<?php echo c_bln('permohonan_informasi','08') ?>,
-        						<?php echo c_bln('permohonan_informasi','09') ?>,
-        						<?php echo c_bln('permohonan_informasi','10') ?>,
-        						<?php echo c_bln('permohonan_informasi','11') ?>,
-        						<?php echo c_bln('permohonan_informasi','12') ?>
+        						<?php echo c_bln('devisi','01','Informasi Berkala') ?>,
+        						<?php echo c_bln('devisi','02','Informasi Berkala') ?>,
+        						<?php echo c_bln('devisi','03','Informasi Berkala') ?>,
+        						<?php echo c_bln('devisi','04','Informasi Berkala') ?>,
+        						<?php echo c_bln('devisi','05','Informasi Berkala') ?>,
+        						<?php echo c_bln('devisi','06','Informasi Berkala') ?>,
+        						<?php echo c_bln('devisi','07','Informasi Berkala') ?>,
+        						<?php echo c_bln('devisi','08','Informasi Berkala') ?>,
+        						<?php echo c_bln('devisi','09','Informasi Berkala') ?>,
+        						<?php echo c_bln('devisi','10','Informasi Berkala') ?>,
+        						<?php echo c_bln('devisi','11','Informasi Berkala') ?>,
+        						<?php echo c_bln('devisi','12','Informasi Berkala') ?>
         					  ]
       },
       {
-        label               : 'Pengajuan Keberatan Informasi',
+        label               : 'Informasi Setiap Saat',
         fillColor           : '#dd4b39',
         strokeColor         : '#dd4b39',
         pointColor          : '#dd4b39',
@@ -243,22 +243,22 @@
         pointHighlightFill  : '#fff',
         pointHighlightStroke: '#dd4b39',
         data                : [
-        						<?php echo c_bln('keberatan_informasi','01') ?>,
-        						<?php echo c_bln('keberatan_informasi','02') ?>,
-        						<?php echo c_bln('keberatan_informasi','03') ?>,
-        						<?php echo c_bln('keberatan_informasi','04') ?>,
-        						<?php echo c_bln('keberatan_informasi','05') ?>,
-        						<?php echo c_bln('keberatan_informasi','06') ?>,
-        						<?php echo c_bln('keberatan_informasi','07') ?>,
-        						<?php echo c_bln('keberatan_informasi','08') ?>,
-        						<?php echo c_bln('keberatan_informasi','09') ?>,
-        						<?php echo c_bln('keberatan_informasi','10') ?>,
-        						<?php echo c_bln('keberatan_informasi','11') ?>,
-        						<?php echo c_bln('keberatan_informasi','12') ?>
+        						<?php echo c_bln('devisi','01','Informasi Setiap Saat') ?>,
+        						<?php echo c_bln('devisi','02','Informasi Setiap Saat') ?>,
+        						<?php echo c_bln('devisi','03','Informasi Setiap Saat') ?>,
+        						<?php echo c_bln('devisi','04','Informasi Setiap Saat') ?>,
+        						<?php echo c_bln('devisi','05','Informasi Setiap Saat') ?>,
+        						<?php echo c_bln('devisi','06','Informasi Setiap Saat') ?>,
+        						<?php echo c_bln('devisi','07','Informasi Setiap Saat') ?>,
+        						<?php echo c_bln('devisi','08','Informasi Setiap Saat') ?>,
+        						<?php echo c_bln('devisi','09','Informasi Setiap Saat') ?>,
+        						<?php echo c_bln('devisi','10','Informasi Setiap Saat') ?>,
+        						<?php echo c_bln('devisi','11','Informasi Setiap Saat') ?>,
+        						<?php echo c_bln('devisi','12','Informasi Setiap Saat') ?>
         					  ]
       },
       {
-        label               : 'Aduan Pelanggaran',
+        label               : 'Informasi Setiap Saat',
         fillColor           : '#00a65a',
         strokeColor         : '#00a65a',
         pointColor          : '#00a65a',
@@ -266,18 +266,18 @@
         pointHighlightFill  : '#fff',
         pointHighlightStroke: '#00a65a',
         data                : [
-        						<?php echo c_bln('aduan_pelanggaran','01') ?>,
-        						<?php echo c_bln('aduan_pelanggaran','02') ?>,
-        						<?php echo c_bln('aduan_pelanggaran','03') ?>,
-        						<?php echo c_bln('aduan_pelanggaran','04') ?>,
-        						<?php echo c_bln('aduan_pelanggaran','05') ?>,
-        						<?php echo c_bln('aduan_pelanggaran','06') ?>,
-        						<?php echo c_bln('aduan_pelanggaran','07') ?>,
-        						<?php echo c_bln('aduan_pelanggaran','08') ?>,
-        						<?php echo c_bln('aduan_pelanggaran','09') ?>,
-        						<?php echo c_bln('aduan_pelanggaran','10') ?>,
-        						<?php echo c_bln('aduan_pelanggaran','11') ?>,
-        						<?php echo c_bln('aduan_pelanggaran','12') ?>
+        						<?php echo c_bln('devisi','01','Informasi Setiap Saat') ?>,
+        						<?php echo c_bln('devisi','02','Informasi Setiap Saat') ?>,
+        						<?php echo c_bln('devisi','03','Informasi Setiap Saat') ?>,
+        						<?php echo c_bln('devisi','04','Informasi Setiap Saat') ?>,
+        						<?php echo c_bln('devisi','05','Informasi Setiap Saat') ?>,
+        						<?php echo c_bln('devisi','06','Informasi Setiap Saat') ?>,
+        						<?php echo c_bln('devisi','07','Informasi Setiap Saat') ?>,
+        						<?php echo c_bln('devisi','08','Informasi Setiap Saat') ?>,
+        						<?php echo c_bln('devisi','09','Informasi Setiap Saat') ?>,
+        						<?php echo c_bln('devisi','10','Informasi Setiap Saat') ?>,
+        						<?php echo c_bln('devisi','11','Informasi Setiap Saat') ?>,
+        						<?php echo c_bln('devisi','12','Informasi Setiap Saat') ?>
         					  ]
       }
     ]

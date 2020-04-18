@@ -94,7 +94,7 @@ class Devisi extends CI_Controller
             $this->create();
         } else {
 
-            $file = upload_gambar_biasa('file_', 'image/file/', 'docx|xls|xlsx', 10000, 'userfile');
+            $file = upload_gambar_biasa('file_', 'image/file/', 'docx|xls|xlsx|pdf', 10000, 'userfile');
 
             $data = array(
 		'ringkasan_informasi' => $this->input->post('ringkasan_informasi',TRUE),
@@ -155,6 +155,7 @@ class Devisi extends CI_Controller
 		'bentuk_informasi' => $this->input->post('bentuk_informasi',TRUE),
 		'jangka_waktu' => $this->input->post('jangka_waktu',TRUE),
 		'kategori_informasi' => $this->input->post('kategori_informasi',TRUE),
+        'file' => $retVal = ($_FILES['userfile']['name'] == '') ? $_POST['file_old'] : upload_gambar_biasa('file_', 'image/file/', 'docx|xls|xlsx|pdf', 10000, 'userfile'),
 	    );
 
             $this->Devisi_model->update($this->input->post('id', TRUE), $data);

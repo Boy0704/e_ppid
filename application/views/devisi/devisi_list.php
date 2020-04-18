@@ -56,6 +56,7 @@
 			<td><?php echo $devisi->jangka_waktu ?></td>
 			<td><?php echo $devisi->kategori_informasi ?></td>
 			<td style="text-align:center" width="200px">
+                <a href="image/file/<?php echo $devisi->file ?>" class="label label-success">Lihat File</a>
 				<?php 
 				echo anchor(site_url('devisi/update/'.$devisi->id),'<span class="label label-info">Ubah</span>'); 
 				echo ' | '; 

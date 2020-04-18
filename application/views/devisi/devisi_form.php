@@ -13,9 +13,9 @@
             ?>
             <p>*) File Sebelumnya : <a href="image/file/<?php echo $file ?>" target="_blank"><?php echo $file ?></a></p>
             <?php } ?>
-            
+            <input type="hidden" name="file_old" value="<?php echo $file ?>">
             <input type="file" name="userfile" class="form-control" required>
-            <p style="color: red">*) File yang bisa diupload bertipe docx | xls | xlsx</p>
+            <p style="color: red">*) File yang bisa diupload bertipe docx | xls | xlsx | pdf</p>
         </div>
 	    <div class="form-group">
             <label for="varchar">Penjabat/Unit/Satker Yang Menguasai Informasi <?php echo form_error('penjabat_yang_menguasai_informasi') ?></label>
