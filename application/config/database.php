@@ -6,10 +6,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	// 'hostname' => 'jualkoding.com',
-	// 'username' => 'u6115584_pakan',
-	// 'password' => '@12345678',
-	// 'database' => 'u6115584_sispanlih',
+	
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
